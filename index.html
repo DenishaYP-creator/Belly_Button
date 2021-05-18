@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="bg-dark text-secondary px-4 py-5">
+            <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">Project Background </h1>
+            </div>
+          </div>
+        </div>
+    </div-->
+
+  <!--CONTAINER JUMBO-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron col-md-12 text-center ">
+        <h1 class="display-4 text-white"> <strong>Belly Button </strong>Biodiversity Dashboard</h1>
+        <p class=text-white>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+
+      <!--BARCHART START -->
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <!--BARCHART ENDS -->
+
+      <!--GUAGE CHART START -->
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+      <!--GUAGE CHART ENDS  -->
+    </div>
+    <!--BUBBLE CHART START  -->
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+    <!--BUBBLE CHART ENDS  -->
+  </div>
+
+  <!--DARK MODE DIVER -->
+  <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Project Overview</h1>
+      <div class="col-lg-6 mx-auto">
+        <!-- <p class="text-left display-6 "> By: Denisha Perez
+        </p> -->
+        <!-- <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> -->
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="b-example-divider mb-0"></div>
+  <!--BAckgrounde Section -->
+  <div class="h-100 p-5 bg-light border rounded-3">
+    <h2>Background</h2>
+    <p class="fs-4"> Belly Button Biodiversity, a biological research facility, recently partnered with Improbable Beef,
+      a food
+      start-up, to help facilitate the discovery of a unique bacteria with the capabilities of synthesizing proteins
+      that taste similar to meat.
+      The discovery will allow Improbable Beef to launch a new delicious alternative option to regular Beef. </p>
+    <!-- <button class="btn btn-outline-secondary" type="button">Example button</button> -->
+  </div>
+
+  <div class="h-100 p-5 bg-light border rounded-3">
+    <h2>Privacy</h2>
+    <p class="fs-4">The Belly Button Biodiversity Research team takes pride in maintaining participants' privacy.
+      To help in delivering on our promise, they've created the Belly Button Biodiversity dashboard.
+    </p>
+    <!-- <button class="btn btn-outline-secondary" type="button">Example button</button> -->
+  </div>
+
+  <div class="h-100 p-5 bg-light border rounded-3">
+    <h2>Hypothesis</h2>
+    <p class="fs-4">
+      The data presented on this site was gathered and analyzed by Rosa Bee, a biological
+      researcher employed by BBD. Ms. Bee hypothesize that the ideal species to make synthetic
+      Beef is located in the naval of humans. </p>
+    <!-- <button class="btn btn-outline-secondary" type="button">Example button</button> -->
+  </div>
+
+
+  <div class="h-100 p-5 bg-light border rounded-3">
+    <h2>Results</h2>
+    <p class="fs-4">The dashboards catalogs the results of specimen gathered from individuals across the
+      country. The dashboard allows research participates and fellow researchers to view the data
+      utilizing test subject ID no.</p>
+  </div>
+  <!-- </div> -->
+
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <div class="mx-auto" style="width: 200px;">
+        <h1 class="display-5 fw-bold">Resources</h1>
+        <p class="fs-4">Tools used to build this site.</p>
+        <div class="list-group">
+          <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            Javacript
+          </button>
+          <button type="button" class="list-group-item list-group-item-action "> HTML & CSS </button>
+          <button type="button" class="list-group-item list-group-item-action">Plotly Graphing Library</button>
+          <button type="button" class="list-group-item list-group-item-action">Bootstrap </button>
+          <button type="button" class="list-group-item list-group-item-action">VS Code </button>
+        </div>
+      </div>
+
+
+      <!-- <h1 class="display-5 fw-bold">Belly Button Biodiversity Dashboard</h1> -->
+
+      <!--<button class="btn btn-primary btn-lg" type="button">Example button</button>-->
+      <!-- <div class="col-md-6">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>Change the background</h2>
+        <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look.
+          Then, mix and match with additional component themes and more.</p>
+
+      </div> -->
+    </div>
+  </div>
+
+  <!--BOTTOM NAV-->
+  <nav class="navbar static-bottom navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Back to Top of Page</a< /nav>
+
+
+        <!--JAVACRIPTS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="charts.js"></script>
+</body>
+
+</html>
